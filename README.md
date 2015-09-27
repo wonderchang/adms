@@ -7,3 +7,7 @@ This repo is for the class I attend in 2015 fall semester.
 * Departemnt: NCKU CSIE
 
 The related code of the topic I studied will put in here, also the final project.
+
+## Topics I study
+
+### Sampling Theorem
