@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampling Theorem</title>
+    <link rel="stylesheet" href="../app.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="ui header">Topic 1: Sampling Theorem</h1>
+      <h2 class="ui header">Ex1: Proof by Numerical Analysis</h2>
+      <p>
+        Consider the cosine wave with 2&pi; period is the signal we want to sample, see the blue line in the below chart.
+        Because the cosine is a very pure periodic signal, we can easily identify its frequency domain, remaining only two impules at the -1/2&pi; and 1/2&pi;.
+        So the maxima frequency of a cosine wave with 2&pi; period is 1/2&pi;.
+        According to Sampling Theorem, the sampling frequency should be two times greater than the maxima frequency of the signal, which means the sampling frequency should greater than 1/&pi; (fs > 1/&pi;).
+      </p>
+      <p>
+        I make an adjustable bar that enable the user to change different sampling period to see the sampling result.
+        Use the numerical analysis to plot the point in the chart to figure out what the Sampling Theorem is doing.
+        This related argument and its initial value are list below:
+      </p>
+      <div class="ui bulleted list">
+        <div class="item">Domain: [0, 20&pi;], Range: [1, -1]</div>
+        <div class="item">Cosine wave period: 2&pi;</div>
+        <div class="item">Cosine wave frequency: 1/2&pi;</div>
+        <div id="samp-peri" class="item">Sampling Period: <span></span>&pi; sec</div>
+        <div id="samp-freq" class="item">Sampling Frequency: <span></span>&pi; Hz</div>
+      </div><span id="s-f-min" class="ui header tiny"></span>
+      <input id="adjust" type="range" min="0" max="100" value="100"><span id="s-f-max" class="ui header tiny"></span>
+      <div id="signal-chart"></div><a href="https://github.com/wonderchang/adms/tree/master/app/1">All the code is open source and available in GitHub.</a>
+    </div>
+    <script src="../app.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
