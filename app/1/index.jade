@@ -8,8 +8,8 @@ block main
     | According to Sampling Theorem, the sampling frequency should be two times greater than the maxima frequency of the signal, which means the sampling frequency should greater than 1/&pi; (fs > 1/&pi;).
   p
     | I make an adjustable bar that enable the user to change different sampling period to see the sampling result.
-    | Use the numerical analysis to plot the point in the chart to figure out what the Sampling Theorem is doing.
-    | This related argument and its initial value are list below:
+    | Use the numerical analysis to plot the point in the chart to figure out what the Sampling Theorem is doing, the sampling signal shown as orange line.
+    | The related inital argument and adjustable bar for changing the sampling period are as below:
   .ui.bulleted.list
     .item Domain: [0, 20&pi;], Range: [1, -1]
     .item Cosine wave period: 2&pi;
@@ -22,6 +22,7 @@ block main
       | Sampling Frequency: 
       span
       | &pi; Hz
+  .ui.header.small Adjustable bar for sampling period
   span#s-f-min.ui.header.tiny
   input#adjust(type='range' min='0' max='100' value='100')
   span#s-f-max.ui.header.tiny
