@@ -1,0 +1,33 @@
+extends ../main.jade
+
+block main
+  p
+    | Consider the cosine wave with 2&pi; period is the signal we want to sample, see the blue line in the below chart.
+    | Because the cosine is a very pure periodic signal, we can easily identify its frequency domain, remaining only two impules at the -1/2&pi; and 1/2&pi;.
+    | So the maxima frequency of a cosine wave with 2&pi; period is 1/2&pi;.
+    | According to Sampling Theorem, the sampling frequency should be two times greater than the maxima frequency of the signal, which means the sampling frequency should greater than 1/&pi; (fs > 1/&pi;).
+  p
+    | I make an adjustable bar that enable the user to change different sampling period to see the sampling result.
+    | Use the numerical analysis to plot the point in the chart to figure out what the Sampling Theorem is doing.
+    | This related argument and its initial value are list below:
+  .ui.bulleted.list
+    .item Domain: [0, 20&pi;], Range: [1, -1]
+    .item Cosine wave period: 2&pi;
+    .item Cosine wave frequency: 1/2&pi;
+    .item#samp-peri
+      | Sampling Period: 
+      span
+      | &pi; sec
+    .item#samp-freq
+      | Sampling Frequency: 
+      span
+      | &pi; Hz
+  span#s-f-min.ui.header.tiny
+  input#adjust(type='range' min='0' max='100' value='100')
+  span#s-f-max.ui.header.tiny
+  #signal-chart
+
+block vars
+  - var num = 1
+  - var topic = 'Sampling Theorem'
+  - var exercise = 'Ex1: Proof by Numerical Analysis'

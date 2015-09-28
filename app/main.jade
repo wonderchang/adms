@@ -4,9 +4,13 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title #{title}
+    title #{topic}
     link(rel='stylesheet' href='../app.css')
   body
-    block main
+    .container
+      h1.ui.header Topic #{num}: #{topic}
+      h2.ui.header #{exercise}
+      block main
+      a(href='https://github.com/wonderchang/adms/tree/master/app/#{num}') The source code is open and available at GitHub.
     script(src='../app.js')
     script(src='index.js')
