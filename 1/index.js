@@ -2,7 +2,7 @@ var N, domain, tick, X, x, Y, chart, sF, sP, sampling, res$, i$, to$;
 N = Math.pow(10, 3);
 domain = {
   min: 0,
-  max: 20
+  max: 40
 };
 domain.diff = domain.max - domain.min;
 tick = (domain.max - domain.min) / N;
