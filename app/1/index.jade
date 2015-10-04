@@ -23,12 +23,12 @@ block main
       span
       | &pi; Hz
   .ui.header.small Adjustable bar for sampling period
-  span#s-f-min.ui.header.tiny
-  input#adjust(type='range' min='0' max='100' value='100')
-  span#s-f-max.ui.header.tiny
+  span#s-f-min.ui.header.tiny(style='float: left')
+  span#s-f-max.ui.header.tiny(style='float: right')
+  input#adjust(type='range' min='0' max='100' value='100' style='width: 100%')
   #signal-chart
 
 block vars
   - var num = 1
   - var topic = 'Sampling Theorem'
-  - var exercise = 'Ex1: Proof by Numerical Analysis'
+  - var exercise = 'Ex1: Numerical Analysis'
