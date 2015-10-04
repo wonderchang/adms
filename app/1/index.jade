@@ -1,8 +1,8 @@
 extends ../main.jade
 
 block main
+  .ui.header Consider a cosine signal with 2&pi period. Please sample it with different frequency and discuss the results to demonstrate why Sampling Theorem works.
   p
-    | Consider the cosine wave with 2&pi; period is the signal we want to sample, see the blue line in the below chart.
     | Because the cosine is a very pure periodic signal, we can easily identify its frequency domain, remaining only two impules at the -1/2&pi; and 1/2&pi;.
     | So the maxima frequency of a cosine wave with 2&pi; period is 1/2&pi;.
     | According to Sampling Theorem, the sampling frequency should be two times greater than the maxima frequency of the signal, which means the sampling frequency should greater than 1/&pi; (fs > 1/&pi;).
