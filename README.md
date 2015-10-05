@@ -10,4 +10,4 @@ The related code of the topic I studied will be put in here, also the final proj
 
 ## Topics I study
 
-1. [Sampling Theorem](https://wonderchang.github.io/adms/1/)
+1. [Sampling Theorem](https://wonderchang.github.io/adms/sampling-theorem/)
