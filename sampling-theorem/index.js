@@ -1,4 +1,4 @@
-var N, domain, tick, X, x, Y, chart, sF, sP, sampling, res$, i$, to$;
+var N, domain, tick, X, x, Y, chart, sF, sP, p, sampling, res$, i$, to$;
 N = Math.pow(10, 3);
 domain = {
   min: 0,
@@ -42,8 +42,8 @@ $('#s-f-min').html(sF.min + '&pi;');
 $('#s-f-max').html('&nbsp;' + sF.max + '&pi;');
 sF.diff = sF.max - sF.min;
 sP = sF.min + sF.diff;
-$('#samp-peri span').text(round(sP));
-$('#samp-freq span').text("1 / " + round(sP));
+$('#samp-peri span').text(p = round(sP));
+$('#samp-freq span').html("1/" + p + "&pi; Hz = " + round((1 / (p * Math.PI)) / (1 / (2 * Math.PI))) + " fm");
 res$ = [];
 for (i$ = domain.min, to$ = domain.max; sP < 0 ? i$ >= to$ : i$ <= to$; i$ += sP) {
   x = i$;
@@ -63,10 +63,10 @@ chart.load({
   ]
 });
 $('#adjust').change(function(){
-  var sampling, res$, i$, to$, x;
+  var p, sampling, res$, i$, to$, x;
   sP = sF.min + sF.diff * this.value / 100;
-  $('#samp-peri span').text(round(sP));
-  $('#samp-freq span').text("1 / " + round(sP));
+  $('#samp-peri span').text(p = round(sP));
+  $('#samp-freq span').html("1/" + p + "&pi; Hz = " + round((1 / (p * Math.PI)) / (1 / (2 * Math.PI))) + " fm");
   res$ = [];
   for (i$ = domain.min, to$ = domain.max; sP < 0 ? i$ >= to$ : i$ <= to$; i$ += sP) {
     x = i$;
