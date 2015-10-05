@@ -21,8 +21,8 @@ $ \#s-f-min .html s-f.min+'&pi;'
 $ \#s-f-max .html '&nbsp;'+s-f.max+'&pi;'
 s-f.diff = s-f.max - s-f.min
 s-p = s-f.min + s-f.diff
-$ '#samp-peri span' .text round s-p
-$ '#samp-freq span' .text "1 / #{round s-p}"
+$ '#samp-peri span' .text p = round s-p
+$ '#samp-freq span' .html "1/#p&pi; Hz = #{round (1/(p*Math.PI))/(1/(2*Math.PI))} fm"
 sampling = for x from domain.min to domain.max by s-p
   x: x * Math.PI
   y: Math.cos x * Math.PI
@@ -33,8 +33,8 @@ chart.load do
 
 $ \#adjust .change ->
   s-p := s-f.min + s-f.diff * this.value / 100
-  $ '#samp-peri span' .text round s-p
-  $ '#samp-freq span' .text "1 / #{round s-p}"
+  $ '#samp-peri span' .text p = round s-p
+  $ '#samp-freq span' .html "1/#p&pi; Hz = #{round (1/(p*Math.PI))/(1/(2*Math.PI))} fm"
   sampling = for x from domain.min to domain.max by s-p
     x: x * Math.PI
     y: Math.cos x * Math.PI
