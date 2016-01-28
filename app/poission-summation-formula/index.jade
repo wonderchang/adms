@@ -1,0 +1,13 @@
+extends ../main.jade
+
+block main
+  .ui.header Calculate summation of series
+  p f(x): Original series
+  p g(x): After substituting by Poission Summation Formula
+  p Obviously, g(x)'s convergence is faster then f(x)'s, converging to 1.3862
+  #plot
+
+block vars
+  - var num = 2
+  - var topic = 'Poission Summation Formula'
+  - var exercise = 'Exercise 1'
