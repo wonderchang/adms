@@ -1,0 +1,11 @@
+threshold = 0.04322038855
+[ { cluster: '250', value: 1585 },
+  { cluster: '242', value: 1442 },
+  { cluster: '268', value: 1066 },
+  { cluster: '254', value: 1049 },
+  { cluster: '269', value: 942 },
+  { cluster: '246', value: 689 },
+  { cluster: '256', value: 684 },
+  { cluster: '253', value: 646 },
+  { cluster: '271', value: 598 },
+  { cluster: '243', value: 558 } ]
