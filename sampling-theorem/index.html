@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampling Theorem</title>
+    <link rel="stylesheet" href="../app.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="ui header">Topic 1: Sampling Theorem</h1>
+      <h2 class="ui header">Exercise 1</h2>
+      <div class="ui header">Consider a cosine signal with 2&pi; period. Please sample it with different frequency and discuss the results to demonstrate why Sampling Theorem works.</div>
+      <p>
+        Because the cosine is a very pure periodic signal, we can easily identify its frequency domain, remaining only two impules at the -1/2&pi; and 1/2&pi;.
+        So the maxima frequency of a cosine wave with 2&pi; period is 1/2&pi;.
+        According to Sampling Theorem, the sampling frequency should be two times greater than the maxima frequency of the signal, which means the sampling frequency should greater than 1/&pi; (fs > 1/&pi;).
+      </p>
+      <p>
+        I make an adjustable bar that enable the user to change different sampling period to see the sampling result.
+        Use the numerical analysis to plot the point in the chart to figure out what the Sampling Theorem is doing, the sampling signal shown as orange line.
+        The related inital argument and adjustable bar for changing the sampling period are as below:
+      </p>
+      <div class="ui bulleted list">
+        <div class="item">Domain: [0, 40&pi;], Range: [1, -1]</div>
+        <div class="item">Cosine wave period: 2&pi;</div>
+        <div class="item">Cosine wave frequency: 1/2&pi;</div>
+        <div class="item">The maxima frequency (fm) = 1/2&pi;</div>
+        <div id="samp-peri" class="item">Sampling Period: <span></span>&pi; sec</div>
+        <div id="samp-freq" class="item">Sampling Frequency (fs): <span></span></div>
+      </div>
+      <div class="ui header small">Adjustable bar for sampling period</div><span id="s-f-min" style="float: left" class="ui header tiny"></span><span id="s-f-max" style="float: right" class="ui header tiny"></span>
+      <input id="adjust" type="range" min="0" max="100" value="100" style="width: 100%">
+      <div id="signal-chart"></div><a href="https://github.com/wonderchang/adms/tree/master/app/1">The source code are open and available in GitHub.</a>
+    </div>
+    <script src="../app.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
