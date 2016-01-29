@@ -11,3 +11,5 @@ The related code of the topic I studied will be put in here, also the final proj
 ## Topics I study
 
 1. [Sampling Theorem](https://wonderchang.github.io/adms/sampling-theorem/)
+2. [Poission Summation Formula](https://wonderchang.github.io/adms/poission-summation-formula/)
+3. [Entropy](https://wonderchang.github.io/adms/entropy/)
