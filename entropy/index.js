@@ -10,14 +10,12 @@ for (i$ = lowerBound; i$ <= upperBound; i$ += 0.1) {
   x.push(i);
   normalDist.push(p = (1 / Math.sqrt(2 * Math.PI)) * Math.exp(-i * i / 2));
   if (p === 0) {
-    e = null;
+    e = 0;
   } else {
     e = -p * (Math.log(p) / Math.log(2));
   }
   entropyDist.push(e);
-  if (e !== null) {
-    entropy += e;
-  }
+  entropy += e;
 }
 c3.generate({
   bindto: '#plot-normal',
