@@ -1,4 +1,4 @@
-require! <[gulp main-bower-files gulp-concat gulp-filter gulp-jade gulp-livereload gulp-livescript gulp-markdown gulp-print gulp-rename gulp-stylus gulp-util streamqueue tiny-lr]>
+require! <[gulp main-bower-files gulp-concat gulp-filter gulp-jade gulp-livereload gulp-livescript gulp-markdown gulp-print gulp-rename gulp-stylus gulp-util streamqueue tiny-lr gulp-gh-pages]>
 
 port = 8998
 tiny-lr-port = 35729
@@ -25,6 +25,7 @@ gulp.task \server ->
   express-server.use express.static paths.build
   express-server.listen port
   gulp-util.log "Listening on port: #port"
+  gulp.src \public/**/* .pipe gulp-gh-pages!
 
 gulp.task \html ->
   jade = gulp.src paths.app+\/**/*.jade .pipe gulp-jade {+pretty}
@@ -52,5 +53,8 @@ gulp.task \js ->
   gulp.src paths.app+\/**/*.ls .pipe gulp-livescript {+bare}
     .pipe gulp.dest paths.build
     .pipe livereload!
+
+gulp.task \deploy ->
+  gulp.src \public/**/* .pipe gulp-gh-pages!
 
 # vi:et:ft=ls:nowrap:sw=2:ts=2
